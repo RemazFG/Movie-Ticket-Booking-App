@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject_1.PaymentPage"
+             Title="Payment" 
+              BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="25">
+
+            <Image Source="cinema_logo.png"
+                   HeightRequest="130"
+                   HorizontalOptions="Center"
+                   Margin="0,10"/>
+
+            <Label Text="Coupons" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+
+            <Frame Padding="12" BorderColor="#DDD" CornerRadius="12">
+                <HorizontalStackLayout Spacing="10">
+                    <Entry x:Name="CouponEntry" 
+                           Placeholder="Enter coupon code" 
+                           HorizontalOptions="Fill"/>
+
+                    <Button Text="Apply Coupon" 
+                            Clicked="ApplyCouponClicked" 
+                            BackgroundColor="#E5E5E5" 
+                            TextColor="Black"/>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Label x:Name="moviePriceLabel"
+                   FontSize="18"
+                   TextColor="#ffb300"
+                   FontAttributes="Bold"/>
+
+            <Label Text="Choose Payment Method" FontSize="20" FontAttributes="Bold" TextColor="White"/>
+
+            <VerticalStackLayout Spacing="15" Padding="10">
+
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                    <RadioButton x:Name="applePayRadio"
+                                 Content="Apple Pay"
+                                 GroupName="Payments"
+                                 CheckedChanged="PaymentOptionChanged"
+                                 TextColor="White"/>
+                    <Image Source="applepay.png" HeightRequest="28"/>
+                    <Label Text="Apple Pay" VerticalTextAlignment="Center" TextColor="White"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                    <RadioButton x:Name="tabbyRadio"
+                                 Content="Tabby"
+                                 GroupName="Payments"
+                                 CheckedChanged="PaymentOptionChanged"
+                                 TextColor="White"/>
+                    <Image Source="tabbypay.png" HeightRequest="28"/>
+                    <Label Text="Tabby - Pay later" VerticalTextAlignment="Center" TextColor="White"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                    <RadioButton x:Name="stcPayRadio"
+                                 Content="STC Pay"
+                                 GroupName="Payments"
+                                 CheckedChanged="PaymentOptionChanged"
+                                 TextColor="White"/>
+                    <Image Source="stcpay.png" HeightRequest="28"/>
+                    <Label Text="STC Pay" VerticalTextAlignment="Center" TextColor="White"/>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+
+            <Button x:Name="payButton"
+                    Text="Select Payment"
+                    BackgroundColor="Gray"
+                    TextColor="White"
+                    FontSize="20"
+                    CornerRadius="12"
+                    HeightRequest="55"
+                    IsEnabled="False"
+                    Clicked="PayClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

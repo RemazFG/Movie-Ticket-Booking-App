@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject_1.MainPage"
+             BackgroundColor="#121212"
+             Title="Home">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="0">
+
+            <Grid HeightRequest="70" BackgroundColor="#1F1F1F" Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <HorizontalStackLayout VerticalOptions="Center">
+                    <Label Text="MAGIC" FontSize="28" FontAttributes="Bold" TextColor="White" />
+                    <Label Text=" CINEMA" FontSize="28" FontAttributes="Bold" TextColor="#ffb300" />
+                </HorizontalStackLayout>
+            </Grid>
+
+            <Grid HeightRequest="400">
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#3a0070" Offset="0" />
+                        <GradientStop Color="#121212" Offset="1" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <VerticalStackLayout VerticalOptions="Center" Margin="30,0">
+                    <Label Text="Avatar: The Way of Water" FontSize="36" FontAttributes="Bold" TextColor="White" />
+                    <Label Text="Return to Pandora." FontSize="18" TextColor="#CCCCCC" Margin="0,5,0,20"/>
+
+                    <Button Text="Book Now" 
+                            Clicked="OnBookNowClicked"
+                            WidthRequest="160" HeightRequest="50"
+                            BackgroundColor="#ffb300" TextColor="Black" FontAttributes="Bold"
+                            CornerRadius="25"/>
+                </VerticalStackLayout>
+            </Grid>
+
+            <Label Text="Now Showing" Margin="20,0,0,15" FontSize="22" FontAttributes="Bold" TextColor="#ffb300" />
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="15" Padding="20,0">
+
+                    <Border StrokeShape="RoundRectangle 10" StrokeThickness="0" BackgroundColor="#222" WidthRequest="160" HeightRequest="280">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnOppenheimerClicked"/>
+                        </Border.GestureRecognizers>
+                        <VerticalStackLayout>
+                            <Image Source="https://static1.srcdn.com/wordpress/wp-content/uploads/2023/05/oppenheimer-poster.jpg" Aspect="AspectFill" HeightRequest="220"/>
+                            <Label Text="Oppenheimer" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,5"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border StrokeShape="RoundRectangle 10" StrokeThickness="0" BackgroundColor="#222" WidthRequest="160" HeightRequest="280">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnInfinityWarClicked"/>
+                        </Border.GestureRecognizers>
+                        <VerticalStackLayout>
+                            <Image Source="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg" Aspect="AspectFill" HeightRequest="220"/>
+                            <Label Text="Infinity War" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,5"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border StrokeShape="RoundRectangle 10" StrokeThickness="0" BackgroundColor="#222" WidthRequest="160" HeightRequest="280">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnBatmanClicked"/>
+                        </Border.GestureRecognizers>
+                        <VerticalStackLayout>
+                            <Image Source="https://image.tmdb.org/t/p/w500/ngl2FKBlU4fhbdsrtdom9LVLBXw.jpg" Aspect="AspectFill" HeightRequest="220"/>
+                            <Label Text="The Batman" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,5"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border StrokeShape="RoundRectangle 10" StrokeThickness="0" BackgroundColor="#222" WidthRequest="160" HeightRequest="280">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnJokerClicked"/>
+                        </Border.GestureRecognizers>
+                        <VerticalStackLayout>
+                            <Image Source="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" Aspect="AspectFill" HeightRequest="220"/>
+                            <Label Text="Joker" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,5"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border StrokeShape="RoundRectangle 10" StrokeThickness="0" BackgroundColor="#222" WidthRequest="160" HeightRequest="280">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSpiderManClicked"/>
+                        </Border.GestureRecognizers>
+                        <VerticalStackLayout>
+                            <Image Source="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" Aspect="AspectFill" HeightRequest="220"/>
+                            <Label Text="Spider-Man" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,5"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border StrokeShape="RoundRectangle 10" StrokeThickness="0" BackgroundColor="#222" WidthRequest="160" HeightRequest="280">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnDuneClicked"/>
+                        </Border.GestureRecognizers>
+                        <VerticalStackLayout>
+                            <Image Source="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" Aspect="AspectFill" HeightRequest="220"/>
+                            <Label Text="Dune: Part Two" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,5"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border StrokeShape="RoundRectangle 10" StrokeThickness="0" BackgroundColor="#222" WidthRequest="160" HeightRequest="280">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnInsideOutClicked"/>
+                        </Border.GestureRecognizers>
+                        <VerticalStackLayout>
+                            <Image Source="https://image.tmdb.org/t/p/w500/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg" Aspect="AspectFill" HeightRequest="220"/>
+                            <Label Text="Inside Out 2" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,5"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <Label Text="© 2025 Magic Cinema" TextColor="Gray" HorizontalOptions="Center" Margin="0,40,0,20" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

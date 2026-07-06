@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject_1.BookingSuccessPage"
+             Title="Confirmed" BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center">
+
+            <Image Source="cinema_ticket.png" HeightRequest="100"/>
+            <Label Text="Booking Confirmed!" FontSize="28" FontAttributes="Bold" TextColor="#00FF00" HorizontalOptions="Center"/>
+
+            <!-- Ticket Card -->
+            <Frame BackgroundColor="#222" CornerRadius="15" BorderColor="#ffb300" Padding="20">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="YOUR TICKET" TextColor="Gray" HorizontalOptions="Center"  />
+
+                    <Label x:Name="MovieNameLabel" Text="Movie Name" TextColor="#ffb300" FontSize="22" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                    <BoxView Color="Gray" HeightRequest="1" Margin="0,5"/>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="Branch:" TextColor="Gray"/>
+                        <Label x:Name="BranchLabel" TextColor="White"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="Date:" TextColor="Gray"/>
+                        <Label x:Name="DateLabel" TextColor="White"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="Time:" TextColor="Gray"/>
+                        <Label x:Name="TimeLabel" TextColor="White"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="Tickets:" TextColor="Gray"/>
+                        <Label x:Name="TicketsLabel" TextColor="White"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Back to Home" Clicked="OnHomeClicked" BackgroundColor="#ffb300" TextColor="Black" FontAttributes="Bold" CornerRadius="20"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

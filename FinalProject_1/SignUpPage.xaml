@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject_1.SignUpPage"
+             BackgroundColor="#121212"
+             Title="Sign Up">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="Center">
+
+            <Label Text="Create Account" FontSize="32" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Full Name" TextColor="#ffb300" FontAttributes="Bold" />
+                <Entry x:Name="NameEntry" Placeholder="Enter your full name" 
+                       TextColor="White" PlaceholderColor="#666" BackgroundColor="#222"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Email" TextColor="#ffb300" FontAttributes="Bold" />
+                <Entry x:Name="EmailSignUpEntry" Placeholder="Enter your email" Keyboard="Email"
+                       TextColor="White" PlaceholderColor="#666" BackgroundColor="#222"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Password" TextColor="#ffb300" FontAttributes="Bold" />
+                <Entry x:Name="PasswordSignUpEntry" Placeholder="Create a password" IsPassword="True"
+                       TextColor="White" PlaceholderColor="#666" BackgroundColor="#222"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Confirm Password" TextColor="#ffb300" FontAttributes="Bold" />
+                <Entry x:Name="ConfirmPasswordEntry" Placeholder="Repeat password" IsPassword="True"
+                       TextColor="White" PlaceholderColor="#666" BackgroundColor="#222"/>
+            </VerticalStackLayout>
+
+            <Button Text="Sign Up" Clicked="OnCreateAccountClicked" 
+                    BackgroundColor="#ffb300" TextColor="Black" FontAttributes="Bold" CornerRadius="10" HeightRequest="50" Margin="0,10,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
