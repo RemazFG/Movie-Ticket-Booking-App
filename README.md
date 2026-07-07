@@ -22,3 +22,15 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
+
+## 📸 Screenshots
+
+### 🔑 Authentication & Main Hub
+| Login Screen | Sign Up | Home Screen |
+|--- |--- |--- |
+| ![Login](LogIn%204.png) | ![SignUp](SignUp%205.png) | ![Home](MainPage1.png) |
+
+### 🎬 Movie Details & Booking Flow
+| Movie Details (Top) | Movie Details (Info) | Payment | Booking Success |
+|--- |--- |--- |--- |
+| ![Details 1](moviDetails_1.png) | ![Details 2](movieDetails_2.png) | ![Payment](payment%2010.png) | ![Success](bookSuccess%2011.png) |
